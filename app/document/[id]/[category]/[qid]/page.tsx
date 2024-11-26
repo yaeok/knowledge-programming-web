@@ -6,8 +6,8 @@ import { Operations, OperationsType } from '@/data/operations'
 export async function generateStaticParams() {
   const paths = arrayOperationsId.map((operation) => {
     const lstOperationTypes: OperationsType[] = Object.values(Operations)
-    lstOperationTypes.map((operationTypes) => {
-      arrayQuestionIds.map((question) => {
+    return lstOperationTypes.map((operationTypes) => {
+      return arrayQuestionIds.map((question) => {
         return {
           params: {
             id: operation,
